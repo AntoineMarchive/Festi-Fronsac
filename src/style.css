@@ -92,7 +92,7 @@ body {
 }
 
 .profil ul li::before {
-  content: "🎉";
+  content: "-";
   position: absolute;
   left: 0;
 }
@@ -166,6 +166,12 @@ section {
 @media (max-width: 768px) {
   .header {
     flex-direction: column;
+  }
+
+  .header h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .header_nav {
