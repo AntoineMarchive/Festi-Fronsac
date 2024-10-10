@@ -1,0 +1,179 @@
+/* Style général */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+.header {
+  background-color: rgb(24, 32, 68);
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header_img {
+  width: 10%;
+  object-fit: cover;
+}
+
+
+/* Animation de Noël pour le texte Festi' Fronsac */
+@keyframes christmas-glow {
+    0%, 100% {
+      color: #ffd700; /* Doré (or) */
+      text-shadow: 0 0 15px #ffd700, 0 0 30px #ff4500, 0 0 45px #ffd700;
+    }
+    50% {
+      color: #ff4500; /* Rouge brillant */
+      text-shadow: 0 0 10px #ff4500, 0 0 25px #ffd700, 0 0 35px #ff4500;
+    }
+  }
+  
+  .header h1 {
+    font-size: 3.5em;
+    margin: 0;
+    font-family: 'Cursive', sans-serif;
+    animation: christmas-glow 3s infinite alternate;
+    transition: all 0.3s ease;
+  }
+
+.header_nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.header_nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 5px 15px;
+  font-size: 1.2em;
+  transition: color 0.3s ease;
+}
+
+.header_nav a:hover {
+  color: #ffd700;
+}
+
+/* Présentation section */
+.profil {
+  background-color: white;
+  padding: 50px 10%;
+  border-bottom: 4px solid #8e0d0f;
+}
+
+.profil h2 {
+  text-align: center;
+  color: #8e0d0f;
+  font-size: 2.2em;
+}
+
+.profil p {
+  line-height: 1.6;
+  font-size: 1.1em;
+}
+
+.profil ul {
+  margin: 20px 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.profil ul li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.profil ul li::before {
+  content: "🎉";
+  position: absolute;
+  left: 0;
+}
+
+/* Sections communes */
+section h2 {
+  font-size: 2em;
+  color: #8e0d0f;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+section {
+  padding: 50px 10%;
+}
+
+.event,
+.project {
+  background-color: white;
+}
+
+/* Footer */
+.footer {
+  background-color: rgb(24, 32, 68);
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer .contact,
+.footer .meta {
+  font-size: 1.1em;
+}
+.meta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: white;
+}
+
+/* Animation */
+.event-container,
+.projects {
+  animation: fadeIn 2s ease-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .header_nav {
+    margin-top: 15px;
+  }
+
+  .header_nav a {
+    display: block;
+    margin: 10px 0;
+  }
+}
